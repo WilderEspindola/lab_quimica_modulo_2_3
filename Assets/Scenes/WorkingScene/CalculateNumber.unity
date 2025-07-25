@@ -24906,8 +24906,8 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1586764721}
-        m_TargetAssemblyTypeName: CubeRiser, Assembly-CSharp
+      - m_Target: {fileID: 1586764720}
+        m_TargetAssemblyTypeName: CubeMover, Assembly-CSharp
         m_MethodName: MoveCubeUp
         m_Mode: 1
         m_Arguments:
@@ -26549,7 +26549,6 @@ GameObject:
   - component: {fileID: 1586764718}
   - component: {fileID: 1586764717}
   - component: {fileID: 1586764720}
-  - component: {fileID: 1586764721}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -26658,22 +26657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d208114abb7a43d4d920152b416ad64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descentAmount: 0.1
-  minYPosition: 0.1
---- !u!114 &1586764721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586764715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c59023708b6644ca468712df1dd696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  riseAmount: 0.1
-  maxYPosition: 0.6
+  moveAmount: 0.1
 --- !u!1 &1589063186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5268460675038366902, guid: f5afcb7f49afad5419049090809f5cc7, type: 3}

@@ -2,34 +2,24 @@ using UnityEngine;
 
 public class CubeMover : MonoBehaviour
 {
-    [Tooltip("Cantidad que baja el cubo en Y (por clic).")]
-    public float descentAmount = 0.1f; // Ajustable en el Inspector
+    [Tooltip("Cantidad fija que se mueve el cubo en Y (por clic).")]
+    public float moveAmount = 0.1f; // Afecta tanto subida como bajada
 
-    [Tooltip("Altura mínima permitida (Y no puede ser menor a esto).")]
-    public float minYPosition = 0.1f; // Límite inferior en Y
-
-    private Vector3 originalPosition; // Guarda la posición inicial
-
-    void Start()
-    {
-        originalPosition = transform.position; // Posición exacta inicial
-    }
-
-    // Método para bajar el cubo (llamado por el botón UI)
+    // Bajar el cubo (resta moveAmount en Y)
     public void MoveCubeDown()
     {
-        Vector3 currentPosition = transform.position;
-
-        // Calcula la nueva posición Y (restando descentAmount, pero no menos de minYPosition)
-        float newY = Mathf.Max(currentPosition.y - descentAmount, minYPosition);
-
-        // Aplica el movimiento SOLO en Y (mantiene X y Z originales)
-        transform.position = new Vector3(currentPosition.x, newY, currentPosition.z);
+        transform.position -= new Vector3(0, moveAmount, 0);
     }
 
-    // (Opcional) Resetear a la posición inicial
+    // Subir el cubo (suma moveAmount en Y)
+    public void MoveCubeUp()
+    {
+        transform.position += new Vector3(0, moveAmount, 0);
+    }
+
+    // (Opcional) Resetear a la posición inicial exacta
     public void ResetPosition()
     {
-        transform.position = originalPosition;
+        transform.position = new Vector3(2.979f, 0.692f, 0.57f);
     }
 }
